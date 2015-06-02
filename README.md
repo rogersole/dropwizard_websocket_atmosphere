@@ -11,9 +11,9 @@ It's just for a test purposes, so don't expect any production-ready code in here
 ## Index
 
 - [Requirements](#requirements)
-- [Development software/frameworks](#development-software-frameworks)
+- [Development software/frameworks](#development-software-and-frameworks)
 - [Source code and application structure](#source-code-and-application-structure)
-- [Configuration/Run steps](#configuration-run-steps)
+- [Configuration/Run steps](#configuration-and-running-steps)
 - [REST endpoints](#rest-endpoints)
 - [WEBSOCKET endpoints](#websocket-endpoints)
 - [Post-mortem](#post-mortem)
@@ -33,7 +33,7 @@ To **execute** the project, it's needed:
 - PostgreSQL
 
 
-## Development software/frameworks
+## Development software and frameworks
 
 Frameworks and packages used for development:
 
@@ -58,7 +58,7 @@ Frameworks and packages used for development:
 - `run-server.sh`: this script launches the application.
 
 
-## Configuration/Run steps
+## Configuration and running steps
 
 - **Building the Jar**. If willing to build the .jar project, it must be done using `package`:
 
