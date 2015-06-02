@@ -1,5 +1,6 @@
 
-# DROPWIZARD + ATMOSPHERE WEB SERVER EXAMPLE
+# DROPWIZARD + ATMOSPHERE 
+## WEB SERVER EXAMPLE
 
 ---------
 
@@ -7,8 +8,19 @@ This example aims to serve as an example to integrate `Atmosphere`  to a `Dropwi
 This way, both interfaces, REST and Websocket, can be published from the same project.
 It's just for a test purposes, so don't expect any production-ready code in here.
 
+## Index
 
-## REQUIREMENTS
+- [Requirements](#requirements)
+- [Development software/frameworks](#development-software/frameworks)
+- [Source code and application structure](#source-code-and-application-structure)
+- [Configuration/Run steps](#configuration/run-steps)
+- [REST endpoints](#rest-endpoints)
+- [WEBSOCKET endpoints](#websocket-endpoints)
+- [Post-mortem](#post-mortem)
+
+---------
+
+## Requirements
 
 To **compile** the project, it's needed:
 
@@ -21,7 +33,7 @@ To **execute** the project, it's needed:
 - PostgreSQL
 
 
-## DEVELOPMEMT SOFTWARE/FRAMEWORKS
+## Development software/frameworks
 
 Frameworks and packages used for development:
 
@@ -36,7 +48,7 @@ Frameworks and packages used for development:
 - [PostgreSQL 9.4.1](http://postgresapp.com/)
 
 
-## SOURCE CODE AND APPLICATION STRUCTURE
+## Source code and application structure
 
 - `example.dropwizard-atmosphere-0.0.1-sources.jar`: jar with all the source code.
 - `example.dropwizard-atmosphere-0.0.1.jar`: jar with the application, all in one.
@@ -46,7 +58,7 @@ Frameworks and packages used for development:
 - `run-server.sh`: this script launches the application.
 
 
-## CONFIGURATION/RUN STEPS
+## Configuration/Run steps
 
 - **Building the Jar**. If willing to build the .jar project, it must be done using `package`:
 
@@ -77,7 +89,7 @@ The server can be launched executing the script:
 The server is exposed on **localhost**, port **8080**.  
 Port 8081 exposes some Dropwizard management resources, such as healthchecks and deadlocks detections.
 
-## REST ENDPOINTS
+## REST endpoints
 
 - **Timezone endpoint**
 
@@ -193,7 +205,7 @@ curl -i -u admin:admin123 -H"Accept: application/json"
 HTTP/1.1 200 OK
 ```
 
-## WEBSOCKET ENDPOINTS
+## WEBSOCKET endpoints
 
 The websocket responses are the same than the endpoints ones.
 ```
@@ -209,19 +221,19 @@ send message: email/repository JSON
 
 ---- 
 
-# POST-MORTEM
+## Post-mortem
 
-## THINGS TO BE DONE
+### Things to be done
 - Unit tests for all the logic
 - Unit tests for the authentication (REST and WEBSOCKET ones)
 - Unit tests mocking database
 - Unit tests mocking interfaces
 
-## IMPROVEMENTS TO BE DONE
+### Improvements to be done
 - Cache on authentication (less access to DB)
 - Cache on endpoints results (for repeated input, same result)
 - Improve authentication method. Currently using Basic authentication.
 
-## CONSIDREATIONS
+### Considerations
 - GitHub API v3 has a Rate Limit returned in the Response. A possible improvement is to consider that Rate Limit to not be exceeded and managed accordingly. [https://developer.github.com/v3/rate_limit/](https://developer.github.com/v3/rate_limit/)
 - Websockets authentication is only done on the socket opening time, not on every message. For authenticate each message, add an Interceptor to the websocket servlets.
