@@ -46,9 +46,9 @@ Frameworks and packages used for development:
 - `run-server.sh`: this script launches the application.
 
 
-## CONFIGURATION STEPS
+## CONFIGURATION/RUN STEPS
 
-- **(Optional) Building the Jar**. If willing to build the .jar project, it must be done using `package`:
+- **Building the Jar**. If willing to build the .jar project, it must be done using `package`:
 
 ```
 mvn package
@@ -65,7 +65,7 @@ mvn package
 ./create-db.sh
 ```
 
-## RUNNING THE SERVER
+- **Run the server**
 
 The server can be launched executing the script:
 
