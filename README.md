@@ -11,9 +11,9 @@ It's just for a test purposes, so don't expect any production-ready code in here
 ## Index
 
 - [Requirements](#requirements)
-- [Development software/frameworks](#development-software-and-frameworks)
+- [Development software and frameworks](#development-software-and-frameworks)
 - [Source code and application structure](#source-code-and-application-structure)
-- [Configuration/Run steps](#configuration-and-running-steps)
+- [Configuration and running steps](#configuration-and-running-steps)
 - [REST endpoints](#rest-endpoints)
 - [WEBSOCKET endpoints](#websocket-endpoints)
 - [Post-mortem](#post-mortem)
