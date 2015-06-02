@@ -50,7 +50,7 @@ Frameworks and packages used for development:
 
 - **Building the Jar**. If willing to build the .jar project, it must be done using `package`:
 
-```
+```bash
 mvn package
 ```
 
@@ -60,7 +60,7 @@ mvn package
 
 - **Create database, tables and static content**
 
-```
+```bash
 # Execute the script, and it will create everything. PostgreSQL must be up and running.
 ./create-db.sh
 ```
@@ -69,7 +69,7 @@ mvn package
 
 The server can be launched executing the script:
 
-```
+```bash
 # Internally it is: "java -jar example.dropwizard-atmosphere-0.0.1.jar server config/example.yml"
 ./run-server.sh
 ```
@@ -87,7 +87,7 @@ GET    http://localhost:8080/rest/timezone?tz=Asia/Tokyo
 
 Testing the endpoint and getting a correct response:
 
-```
+```bash
 # Call
 curl -i -u admin:admin123 -H "Accept: application/json" 
 -H "Content-Type: application/json" 
@@ -102,7 +102,7 @@ curl -i -u admin:admin123 -H "Accept: application/json"
 
 Testing the endpoint and getting an error response:
 
-```
+```bash
 # Call
 curl -i -u admin:admin123 -H "Accept: application/json" 
 -H "Content-Type: application/json" 
@@ -123,7 +123,7 @@ GET    http://localhost:8080/rest/github/topactive?city=Barcelona
 
 Testing the endpoint and getting a correct response:
 
-```
+```bash
 # Call
 curl -i -u admin:admin123 -H "Accept: application/json" 
 -H "Content-Type: application/json" 
@@ -162,7 +162,7 @@ GET    http://localhost:8080/rest/tuple
 
 Testing the endpoint and getting a correct response:
 
-```
+```bash
 # Call
 curl -i -u admin:admin123 -H "Accept: application/json" 
 -H "Content-Type: application/json" 
@@ -182,7 +182,7 @@ curl -i -u admin:admin123 -H "Accept: application/json"
 POST    http://localhost:8080/rest/tuple
 ```
 
-```
+```bash
 # Call
 curl -i -u admin:admin123 -H"Accept: application/json" 
 -H "Content-Type: application/json" 
@@ -220,7 +220,7 @@ send message: email/repository JSON
 ## IMPROVEMENTS TO BE DONE
 - Cache on authentication (less access to DB)
 - Cache on endpoints results (for repeated input, same result)
-- Improve authentication method. Currently using Basic authentication (for velocity sake)
+- Improve authentication method. Currently using Basic authentication.
 
 ## CONSIDREATIONS
 - GitHub API v3 has a Rate Limit returned in the Response. A possible improvement is to consider that Rate Limit to not be exceeded and managed accordingly. [https://developer.github.com/v3/rate_limit/](https://developer.github.com/v3/rate_limit/)
